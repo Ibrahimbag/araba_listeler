@@ -54,26 +54,38 @@ namespace WindowsFormsApp17
 
         private void btnRight1_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Add(listBox1.SelectedItem);
-            listBox1.Items.Remove(listBox1.SelectedItem);
+            if (listBox1.SelectedItem != null)
+            {
+                listBox2.Items.Add(listBox1.SelectedItem);
+                listBox1.Items.Remove(listBox1.SelectedItem);
+            }
         }
 
         private void btnRight2_Click(object sender, EventArgs e)
         {
-            listBox3.Items.Add(listBox2.SelectedItem);
-            listBox2.Items.Remove(listBox2.SelectedItem);
+            if (listBox2.SelectedItem != null)
+            {
+                listBox3.Items.Add(listBox2.SelectedItem);
+                listBox2.Items.Remove(listBox2.SelectedItem);
+            }
         }
 
         private void btnLeft1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add(listBox2.SelectedItem);
-            listBox2.Items.Remove(listBox2.SelectedItem);
+            if (listBox2.SelectedItem != null)
+            {
+                listBox1.Items.Add(listBox2.SelectedItem);
+                listBox2.Items.Remove(listBox2.SelectedItem);
+            }
         }
 
         private void btnLeft2_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Add(listBox3.SelectedItem);
-            listBox3.Items.Remove(listBox3.SelectedItem);
+            if (listBox3.SelectedItem != null)
+            {
+                listBox2.Items.Add(listBox3.SelectedItem);
+                listBox3.Items.Remove(listBox3.SelectedItem);
+            }
         }
     }
 }
