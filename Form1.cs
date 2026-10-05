@@ -52,40 +52,47 @@ namespace WindowsFormsApp17
             listBox3.Items.Remove(listBox3.SelectedItem);
         }
 
-        private void btnRight1_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
             {
-                listBox2.Items.Add(listBox1.SelectedItem);
-                listBox1.Items.Remove(listBox1.SelectedItem);
+                string secilen = listBox1.SelectedItem.ToString();
+
+                listBox2.Items.Add(secilen);
+                listBox1.Items.Remove(secilen);
             }
         }
 
-        private void btnRight2_Click(object sender, EventArgs e)
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox2.SelectedItem != null)
             {
-                listBox3.Items.Add(listBox2.SelectedItem);
-                listBox2.Items.Remove(listBox2.SelectedItem);
+                string secilen = listBox2.SelectedItem.ToString();
+
+                listBox3.Items.Add(secilen);
+                listBox2.Items.Remove(secilen);
             }
         }
 
-        private void btnLeft1_Click(object sender, EventArgs e)
-        {
-            if (listBox2.SelectedItem != null)
-            {
-                listBox1.Items.Add(listBox2.SelectedItem);
-                listBox2.Items.Remove(listBox2.SelectedItem);
-            }
-        }
-
-        private void btnLeft2_Click(object sender, EventArgs e)
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox3.SelectedItem != null)
             {
-                listBox2.Items.Add(listBox3.SelectedItem);
-                listBox3.Items.Remove(listBox3.SelectedItem);
+                string secilen = listBox3.SelectedItem.ToString();
+
+                listBox2.Items.Add(secilen);
+                listBox3.Items.Remove(secilen);
             }
+        }
+
+        private void btnSaga_Click(object sender, EventArgs e)
+        {
+            OgeTasi(listBox2, listBox3);
+        }
+
+        private void btnSola_Click(object sender, EventArgs e)
+        {
+            OgeTasi(listBox2, listBox1);
         }
     }
 }

@@ -41,10 +41,6 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            this.btnRight1 = new System.Windows.Forms.Button();
-            this.btnLeft1 = new System.Windows.Forms.Button();
-            this.btnRight2 = new System.Windows.Forms.Button();
-            this.btnLeft2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,6 +70,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(144, 290);
             this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -105,6 +102,7 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(144, 290);
             this.listBox2.TabIndex = 3;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -126,6 +124,7 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(144, 290);
             this.listBox3.TabIndex = 5;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // txtMarka
             // 
@@ -164,55 +163,11 @@
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // btnRight1
-            // 
-            this.btnRight1.Location = new System.Drawing.Point(268, 145);
-            this.btnRight1.Name = "btnRight1";
-            this.btnRight1.Size = new System.Drawing.Size(45, 23);
-            this.btnRight1.TabIndex = 0;
-            this.btnRight1.Text = "->";
-            this.btnRight1.UseVisualStyleBackColor = true;
-            this.btnRight1.Click += new System.EventHandler(this.btnRight1_Click);
-            // 
-            // btnLeft1
-            // 
-            this.btnLeft1.Location = new System.Drawing.Point(268, 258);
-            this.btnLeft1.Name = "btnLeft1";
-            this.btnLeft1.Size = new System.Drawing.Size(45, 23);
-            this.btnLeft1.TabIndex = 11;
-            this.btnLeft1.Text = "<-";
-            this.btnLeft1.UseVisualStyleBackColor = true;
-            this.btnLeft1.Click += new System.EventHandler(this.btnLeft1_Click);
-            // 
-            // btnRight2
-            // 
-            this.btnRight2.Location = new System.Drawing.Point(469, 145);
-            this.btnRight2.Name = "btnRight2";
-            this.btnRight2.Size = new System.Drawing.Size(45, 23);
-            this.btnRight2.TabIndex = 12;
-            this.btnRight2.Text = "->";
-            this.btnRight2.UseVisualStyleBackColor = true;
-            this.btnRight2.Click += new System.EventHandler(this.btnRight2_Click);
-            // 
-            // btnLeft2
-            // 
-            this.btnLeft2.Location = new System.Drawing.Point(469, 258);
-            this.btnLeft2.Name = "btnLeft2";
-            this.btnLeft2.Size = new System.Drawing.Size(45, 23);
-            this.btnLeft2.TabIndex = 13;
-            this.btnLeft2.Text = "<-";
-            this.btnLeft2.UseVisualStyleBackColor = true;
-            this.btnLeft2.Click += new System.EventHandler(this.btnLeft2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLeft2);
-            this.Controls.Add(this.btnRight2);
-            this.Controls.Add(this.btnLeft1);
-            this.Controls.Add(this.btnRight1);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnEkle);
@@ -245,10 +200,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.Button btnRight1;
-        private System.Windows.Forms.Button btnLeft1;
-        private System.Windows.Forms.Button btnRight2;
-        private System.Windows.Forms.Button btnLeft2;
     }
 }
 
