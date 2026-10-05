@@ -20,8 +20,8 @@ namespace WindowsFormsApp17
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] arabalar = { "Togg", "Ford", "Lamborghini" };
-            listBox1.Items.AddRange(arabalar); 
-            
+            listBox1.Items.AddRange(arabalar);
+
 
             /*
             List<string> arabalar2 = new List<string> { "Ford", "Byd", "Volvo"};
@@ -62,8 +62,7 @@ namespace WindowsFormsApp17
                 listBox1.Items.Remove(secilen);
             }
         }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox2_DoubleClick(object sender, EventArgs e)
         {
             if (listBox2.SelectedItem != null)
             {
@@ -85,12 +84,23 @@ namespace WindowsFormsApp17
             }
         }
 
-        private void btnSaga_Click(object sender, EventArgs e)
+        private void OgeTasi(ListBox kaynak, ListBox hedef)
+        {
+            if (kaynak.SelectedItem != null)
+            {
+                object secilen = kaynak.SelectedItem;
+
+                hedef.Items.Add(secilen);
+                kaynak.Items.Remove(secilen);
+            }
+        }
+
+        private void btnRight_Click(object sender, EventArgs e)
         {
             OgeTasi(listBox2, listBox3);
         }
 
-        private void btnSola_Click(object sender, EventArgs e)
+        private void btnLeft_Click(object sender, EventArgs e)
         {
             OgeTasi(listBox2, listBox1);
         }
